@@ -9,7 +9,7 @@ public class Main {
         int n = scanner.nextInt();
 
         long startTime = System.currentTimeMillis();
-        final int numberOfThreads = 2;
+        final int numberOfThreads = 3;
 
         int[] array = new int[n];
 
