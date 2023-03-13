@@ -14,7 +14,6 @@ public class FindSum extends Thread {
 
     public void run() {
 
-        System.out.println(String.format("Thread started in range: %d:%d", start, end));
         for (int i = start; i <= end; i++) {
             if(i < array.length)
             sum = sum + array[i];
