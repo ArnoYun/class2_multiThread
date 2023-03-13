@@ -18,7 +18,8 @@ public class Main {
 
 
 
-        int numberOfElementsInThread = array.length / numberOfThreads;
+//        int numberOfElementsInThread = array.length / numberOfThreads;
+        int numberOfElementsInThread = (int)Math.ceil((double)(n) / (double)(numberOfThreads));
         FindSimpleNumAmount[] threads = new FindSimpleNumAmount[numberOfThreads];
         for (int i = 0; i < numberOfThreads; i++) {
             int start = i * numberOfElementsInThread+1;
@@ -27,7 +28,7 @@ public class Main {
                 end = array.length-1;
             }
 
-            System.out.println(array[start]+"  "+array[end]);
+
             threads[i] = new FindSimpleNumAmount(array, start, end);
             threads[i].start();
         }
